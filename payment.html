@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Razorpay Payment</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 16px;
+      background-color: #0c8af0;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #076cd6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Purchase Details</h2>
+
+  <form id="purchaseForm">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Email Address" required />
+    <input type="tel" id="phone" placeholder="Phone Number" required />
+    <input type="text" id="address" placeholder="Shipping Address" required />
+  </form>
+
+  <button id="payBtn">Pay Now</button>
+</div>
+
+<!-- Razorpay script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  document.getElementById('payBtn').onclick = function () {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+
+    if (!name || !email || !phone || !address) {
+      alert("Please fill in all purchase details before proceeding.");
+      return;
+    }
+
+    var options = {
+      key: "rzp_test_d2DFy375FKpo5I", // Your Razorpay test API key
+      amount: 1, // Amount in paise = ₹500.00
+      currency: "INR",
+      name: "SportZone",
+      description: "Test Transaction",
+    
+      handler: function (response) {
+        alert("Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+      },
+      prefill: {
+        name: name,
+        email: email,
+        contact: phone
+      },
+      notes: {
+        address: address
+      },
+      theme: {
+        color: "#0c8af0"
+      }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+  };
+</script>
+
+</body>
+</html>

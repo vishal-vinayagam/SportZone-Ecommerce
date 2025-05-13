@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportZone - Premium Sports Equipment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    .view-details {
+        background-color: #fff;
+        border: 1px solid #333;
+        color: #333;
+        padding: 8px 12px;
+        margin-top: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: 0.3s;
+    }
+
+    .view-details:hover {
+        background-color: #333;
+        color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <!-- Header and other sections remain the same until the featured products section -->
+   <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +91-9345457411</span>
+                    <span><i class="fas fa-envelope"></i> v.vishal122005@gmail.com.com</span>
+                </div>
+                <div class="auth-links">
+                    <a href="#"><i class="fas fa-user"></i> Login</a>
+                    <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Sport<span>Zone</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="cart-search">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Premium Sports Equipment</h2>
+                <p>Get the best gear for your favorite sports at unbeatable prices</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="images/football.jpg" alt="Football">
+                    <h3>Football</h3>
+                    <a href="#" class="btn">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/baseketball.jpg" alt="Basketball">
+                    <h3>Basketball</h3>
+                    <a href="#" class="btn">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/tennis.jpg" alt="Tennis">
+                    <h3>Tennis</h3>
+                    <a href="#" class="btn">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/ball.jpg" alt="Fitness">
+                    <h3>Fitness</h3>
+                    <a href="#" class="btn">View Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/Professional Soccer Ball.jpg" alt="Professional Soccer Ball">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Football</span>
+                        <h3 class="product-title">Professional Soccer Ball</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$59.99</span>
+                                <span class="price">$49.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="1">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(1)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/Basketball Hoop Set.jpg" alt="Basketball Hoop Set">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Basketball</span>
+                        <h3 class="product-title">Basketball Hoop Set</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$199.99</span>
+                                <span class="price">$179.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="2">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(2)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/tennis.jpg" alt="Tennis Racket">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Tennis</span>
+                        <h3 class="product-title">Tennis Racket Pro</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$89.99</span>
+                                <span class="price">$79.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="3">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(3)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/Yoga Mat Premium.jpg" alt="Yoga Mat">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fitness</span>
+                        <h3 class="product-title">Yoga Mat Premium</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$39.99</span>
+                                <span class="price">$29.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="4">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(4)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/Running Shoes.jpg" alt="Running Shoes">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fitness</span>
+                        <h3 class="product-title">Running Shoes</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$99.99</span>
+                                <span class="price">$79.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="5">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(5)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/Gym Dumbbell Set.jpg" alt="Dumbbell Set">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fitness</span>
+                        <h3 class="product-title">Gym Dumbbell Set</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$149.99</span>
+                                <span class="price">$129.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="6">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(6)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/Football Cleats.jpg" alt="Football Cleats">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Football</span>
+                        <h3 class="product-title">Football Cleats</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$79.99</span>
+                                <span class="price">$69.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="7">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(7)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/Tennis Balls3.jpg" alt="Tennis Balls">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Tennis</span>
+                        <h3 class="product-title">Tennis Balls (3 Pack)</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$14.99</span>
+                                <span class="price">$12.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="8">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(8)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="images/boxing gloves.jpg" alt="Boxing Gloves">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fitness</span>
+                        <h3 class="product-title">Boxing Gloves</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="old-price">$49.99</span>
+                                <span class="price">$39.99</span>
+                            </div>
+                            <button class="add-to-cart" data-id="9">Add to Cart</button>
+                            <button class="view-details" onclick="purchaseNow(9)">Purchase Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of the HTML remains the same -->
+ <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <p>"The quality of the basketball I purchased exceeded my expectations. Fast shipping too!"</p>
+                    <div class="customer">
+                        <img src="images/reviewer1.jpg" alt="John D.">
+                        <h4>John D.</h4>
+                        <span>Basketball Enthusiast</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Great selection of tennis rackets at competitive prices. Will definitely shop here again."</p>
+                    <div class="customer">
+                        <img src="images/reviewer2.jpg" alt="Sarah M.">
+                        <h4>Sarah M.</h4>
+                        <span>Tennis Player</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Excellent customer service helped me find the perfect fitness equipment for my home gym."</p>
+                    <div class="customer">
+                        <img src="images/reviewer3.jpg" alt="Michael T.">
+                        <h4>Michael T.</h4>
+                        <span>Fitness Trainer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new products and special offers</p>
+                <form>
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SportZone</h3>
+                    <p>Your one-stop shop for premium sports equipment and gear.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Sports Ave, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> support@sportzone.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SportZone. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be loaded here by JavaScript -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>$0.00</span></p>
+            <a href="#" class="btn checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script>
+        // Sample product data
+        const products = [
+            {
+                id: 1,
+                title: "Professional Soccer Ball",
+                category: "Football",
+                price: 49.99,
+                oldPrice: 59.99,
+                image: "images/Professional Soccer Ball.jpg",
+                badge: "Sale",
+                rating: 4.5
+            },
+            {
+                id: 2,
+                title: "Basketball Hoop Set",
+                category: "Basketball",
+                price: 179.99,
+                oldPrice: 199.99,
+                image: "images/Basketball Hoop Set.jpg",
+                badge: "Sale",
+                rating: 4.8
+            },
+            {
+                id: 3,
+                title: "Tennis Racket Pro",
+                category: "Tennis",
+                price: 79.99,
+                oldPrice: 89.99,
+                image: "images/tennis.jpg",
+                badge: "Sale",
+                rating: 4.3
+            },
+            {
+                id: 4,
+                title: "Yoga Mat Premium",
+                category: "Fitness",
+                price: 29.99,
+                oldPrice: 39.99,
+                image: "images/Yoga Mat Premium.jpg",
+                badge: "Sale",
+                rating: 4.7
+            },
+            {
+                id: 5,
+                title: "Running Shoes",
+                category: "Fitness",
+                price: 79.99,
+                oldPrice: 99.99,
+                image: "images/Running Shoes.jpg",
+                badge: "Sale",
+                rating: 4.6
+            },
+            {
+                id: 6,
+                title: "Gym Dumbbell Set",
+                category: "Fitness",
+                price: 129.99,
+                oldPrice: 149.99,
+                image: "images/Gym Dumbbell Set.jpg",
+                badge: "Sale",
+                rating: 4.9
+            },
+            {
+                id: 7,
+                title: "Football Cleats",
+                category: "Football",
+                price: 69.99,
+                oldPrice: 79.99,
+                image: "images/Football Cleats.jpg",
+                badge: "Sale",
+                rating: 4.4
+            },
+            {
+                id: 8,
+                title: "Tennis Balls (3 Pack)",
+                category: "Tennis",
+                price: 12.99,
+                oldPrice: 14.99,
+                image: "images/Tennis Balls3.jpg",
+                badge: "Sale",
+                rating: 4.2
+            },
+            {
+                id: 9,
+                title: "Boxing Gloves",
+                category: "Fitness",
+                price: 39.99,
+                oldPrice: 49.99,
+                image: "images/boxing gloves.jpg",
+                badge: "Sale",
+                rating: 4.5
+            }
+        ];
+
+        // Cart functionality
+        let cart = [];
+
+        // DOM Elements
+        const productGrid = document.querySelector('.product-grid');
+        const cartIcon = document.querySelector('.cart-icon');
+        const cartCount = document.querySelector('.cart-count');
+        const cartSidebar = document.querySelector('.cart-sidebar');
+        const overlay = document.querySelector('.overlay');
+        const closeCart = document.querySelector('.close-cart');
+        const cartItemsContainer = document.querySelector('.cart-items');
+        const cartTotal = document.querySelector('.cart-total span');
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const testimonialSlides = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add event listeners to all "Add to Cart" buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', addToCart);
+            });
+            
+            // Cart toggle
+            cartIcon.addEventListener('click', () => {
+                cartSidebar.classList.add('active');
+                overlay.classList.add('active');
+                updateCartDisplay();
+            });
+            
+            closeCart.addEventListener('click', () => {
+                cartSidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            overlay.addEventListener('click', () => {
+                cartSidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            // Mobile menu toggle
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Testimonial slider
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => showSlide(index));
+            });
+            
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            
+            // Auto slide
+            setInterval(nextSlide, 5000);
+        });
+
+        // Add to cart function
+        function addToCart(event) {
+            const productId = parseInt(event.target.getAttribute('data-id'));
+            const product = products.find(p => p.id === productId);
+            
+            if (product) {
+                // Check if product already exists in cart
+                const existingItem = cart.find(item => item.id === productId);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        ...product,
+                        quantity: 1
+                    });
+                }
+                
+                updateCartCount();
+                showCartNotification(product.title);
+            }
+        }
+
+        // Update cart count in the header
+        function updateCartCount() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = totalItems;
+        }
+
+        // Show notification when item is added to cart
+        function showCartNotification(productName) {
+            const notification = document.createElement('div');
+            notification.className = 'cart-notification';
+            notification.innerHTML = `
+                <p>${productName} added to cart!</p>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Update cart display in sidebar
+        function updateCartDisplay() {
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Your cart is empty</p>';
+                cartTotal.textContent = '$0.00';
+                return;
+            }
+            
+            let html = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                html += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="cart-item-details">
+                            <h4>${item.title}</h4>
+                            <p>$${item.price.toFixed(2)} x ${item.quantity}</p>
+                            <p class="cart-item-total">$${itemTotal.toFixed(2)}</p>
+                            <div class="cart-item-actions">
+                                <button class="quantity-btn minus" data-id="${item.id}">-</button>
+                                <span>${item.quantity}</span>
+                                <button class="quantity-btn plus" data-id="${item.id}">+</button>
+                                <button class="remove-btn" data-id="${item.id}"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsContainer.innerHTML = html;
+            cartTotal.textContent = `$${total.toFixed(2)}`;
+            
+            // Add event listeners to quantity buttons
+            document.querySelectorAll('.quantity-btn').forEach(button => {
+                button.addEventListener('click', updateCartItemQuantity);
+            });
+            
+            // Add event listeners to remove buttons
+            document.querySelectorAll('.remove-btn').forEach(button => {
+                button.addEventListener('click', removeCartItem);
+            });
+        }
+
+        // Update cart item quantity
+        function updateCartItemQuantity(event) {
+            const productId = parseInt(event.target.getAttribute('data-id'));
+            const item = cart.find(item => item.id === productId);
+            
+            if (event.target.classList.contains('minus')) {
+                if (item.quantity > 1) {
+                    item.quantity -= 1;
+                } else {
+                    // Remove item if quantity becomes 0
+                    cart = cart.filter(item => item.id !== productId);
+                }
+            } else if (event.target.classList.contains('plus')) {
+                item.quantity += 1;
+            }
+            
+            updateCartCount();
+            updateCartDisplay();
+        }
+
+        // Remove item from cart
+        function removeCartItem(event) {
+            const productId = parseInt(event.target.closest('button').getAttribute('data-id'));
+            cart = cart.filter(item => item.id !== productId);
+            
+            updateCartCount();
+            updateCartDisplay();
+        }
+
+        // Purchase Now function - redirects to payment page
+        function purchaseNow(productId) {
+            // Add the product to cart with quantity 1
+            const product = products.find(p => p.id === productId);
+            
+            if (product) {
+                // Create a temporary cart with just this product
+                const tempCart = [{
+                    ...product,
+                    quantity: 1
+                }];
+                
+                // Store the cart in sessionStorage
+                sessionStorage.setItem('checkoutCart', JSON.stringify(tempCart));
+                
+                // Redirect to payment page
+                window.location.href = 'payment.html';
+            }
+        }
+
+        // Testimonial slider functions
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            testimonialSlides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = (n + testimonialSlides.length) % testimonialSlides.length;
+            
+            testimonialSlides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+
+    <style>
+        /* Add this CSS for the cart notification */
+        .cart-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .cart-notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Style for cart items in sidebar */
+        .cart-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .cart-item-details {
+            flex: 1;
+        }
+        
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        
+        .quantity-btn {
+            background: #f5f5f5;
+            border: none;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        
+        .remove-btn {
+            background: none;
+            border: none;
+            color: #ff5252;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</body>
+</html>
